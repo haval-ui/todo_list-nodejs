@@ -30,7 +30,10 @@ app.get('/', (req, res) =>{
     res.render('index', {today : formatedDate , newItem : newItems })
 })
 app.post('/', function (req, res) {
-  res.send('POST request to the homepage')
+    let newtask =req.body.add
+    newItems.push(newtask)
+    console.log(newItems)    
+    res.redirect('/')
 })
 
 
