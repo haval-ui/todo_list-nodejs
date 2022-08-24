@@ -12,7 +12,11 @@
         <li>doo yor work </li>
         <li> creater new project </li>
         <li>eat yor food </li>
-        <li><%= newItem %> </li>
+        
+        <% for (var i =0; i<newItem.length ;i++){ %>
+            <li><%= newItem[i] %> </li>
+            <%  } %>
+        
     </ul>
     <form action="/" method="post"> 
         <input type="text" name="add">
